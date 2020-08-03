@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = prompt("몇 몇 단 까지 출력할까요? a,b 형태로 입력해주세요");
+        ///a,b를 받고 숫자로 바꿔서 구구단 함수에서 앞의숫자a최대 뒤의숫자b최대 이런 식으로
+        var n = str.split(',');
+        var num1 = Number(n[0]);
+        var num2 = Number(n[1]);
+
+        function gugu(num1,num2){
+            for(i = 2; i <= num1; i++){
+                for(j = 1; j <= num2; j++){
+                    document.write(i + " X " + j + " = " + (i * j) + "<br>")
+                }
+            }
+        }
+        gugu(num1, num2);
+    </script>
+</body>
+</html>

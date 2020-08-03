@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1~10000 중의 소수 출력하기</h1>
+    <script>
+        var ss = {};      
+        ss.all = [];      //1~10000까지의 전체 수
+        ss.prime = [];    //1~10000까지의 소수
+
+        ss.addAll = function(max_num){         //.all에 10000까지 집어넣는
+            for(i = 1; i <= max_num; i++){
+                this.all.push(i);
+            }
+        }
+
+        ss.isPrime = function(x){        //소수 판별
+            for(j = 2; j < x; j++){
+                if(x % j === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        ss.addPrime = function(n){         //소수를 .prime에 넣기
+            if(this.isPrime(n)){
+                this.prime.push(n);
+            }
+        }
+
+        ss.addAllPrime = function(){       //.all 까지의 모든 소수를 .prime에 넣기
+            for(k= 2; k <= this.all.length; k++){
+                if(this.isPrime(k)){
+                    this.prime.push(k);
+                }
+            }
+        }
+
+        ss.getAllPrime = function(){      //.prime의 원소 출력하기
+            document.write("<h2>전체 소수의 개수 : " + this.prime.length +"개</h2>"+ "<br>");
+            for(i=0; i < this.prime.length; i++){
+                document.write((i+1)+"번째 소수 : "+ this.prime[i] + "<br>");
+            }
+        }
+
+        ss.addAll(10000);
+        ss.addAllPrime();
+        ss.getAllPrime();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>구구단 만들기</h1>
+    <script>
+        function gugu(n){
+            for(i = 1; i <= 9; i++){
+                document.write(n +" X "+ i +" = " + (n * i) + "<br>");
+            }
+        };
+
+        function main(n){
+            for(n = 2; n <= 9; n++){
+                document.write("<h2>" + n +"단</h2>")
+                gugu(n);
+            }
+        }
+        main();
+    </script>
+</body>
+</html>

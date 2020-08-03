@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    var jud = true;
+    var str = prompt("2 이상의 정수를 입력해주세요");
+    var n = Number(str);
+    for(x = 2; x < n; x++){
+        if(n % x === 0){
+            jud = false;
+            break;
+        }
+    }
+    if(jud){
+        document.write(n + "은 소수입니다.");
+    } else {
+        document.write(n + "은 소수가 아닙니다.");
+    }
+</script>
+</body>
+</html>
