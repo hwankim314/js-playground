@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>값 입력 및 사칙연산 - 변수</h1>
+    <div id = "t"></div><br>
+    <input type = "text" id = "i1">  
+    <input type = "text" id = "i2">
+    <button id = "btn1" onclick=calcu()>계산</button><br>
+    <div id = "output"></div><br>
+
+    <script>
+        var out = document.getElementById("t");
+        out.innerHTML = "Input을 사용한 계산";
+
+        var calcu = function(){   
+            var in1 = document.getElementById("i1");
+            var in2 = document.getElementById("i2");
+            var n1 = Number(in1.value);
+            var n2 = Number(in2.value);
+            
+            var out = document.getElementById('output');
+            var p = n1 + " + " + n2 + " = " + (n1 + n2) + "<br>";
+            var m = n1 + " - " + n2 + " = " + (n1 - n2) + "<br>";
+            var x = n1 + " * " + n2 + " = " + (n1 * n2) + "<br>";
+            var d = n1 + " / " + n2 + " = " + (n1 / n2) + "<br>";
+            out.innerHTML=p + m + x + d;
+            
+           
+
+        };
+
+
+ 
+    </script>
+    
+</body>
+</html>

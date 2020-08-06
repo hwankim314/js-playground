@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>값 입력 및 사칙연산 - 변수</h1>
+    <div id = "output"></div><br>
+    <script>
+        var a = prompt("첫 번째 수를 입력해 주세요");
+        var b = prompt("두 번째 수를 입력해 주세요");
+        var n1 = Number(a);
+        var n2 = Number(b);
+        var out = document.getElementById("output");
+        out.innerHTML = "Prompt를 사용한 계산";
+
+        document.write(n1 + " + " + n2 + " = " + (n1 + n2) + "<br>");
+        document.write(n1 + " - " + n2 + " = " + (n1 - n2) + "<br>");
+        document.write(n1 + " * " + n2 + " = " + (n1 * n2) + "<br>");
+        document.write(n1 + " / " + n2 + " = " + (n1 / n2) + "<br>");
+    </script>
+    
+</body>
+</html>
