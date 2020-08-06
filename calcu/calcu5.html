@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수를 활용한 사칙연산 구현</h1>
+    <div id = "output"></div>
+
+    <script>
+        function getFirstValue(){
+            var n1 = Number(prompt("첫 번째 숫자를 입력해 주세요"));
+            return n1;
+        };
+
+        var n = 2;
+        function getSecondValue(){            
+            var n2 = Number(prompt(n+"번째 숫자를 입력해 주세요"));
+            n++;
+            return n2;
+        };
+
+        function getOperator(){
+            while(true){
+                var op = prompt("연산자를 입력해 주세요 (q=종료)");
+                if(op === "+" || op === "-" || op === "*" || op === "/"
+                || op === 'q'){
+                    break;
+                } else {
+                    alert("올바른 연산자를 입력해 주세요");
+                }           
+            }
+            return op;
+        };
+
+        function calculate(first, second, op){
+            var ret;
+            switch(op) {
+                case "+":
+                ret = first + second;
+                break;
+                case "-":
+                ret = first - second;
+                break;
+                case "*":
+                ret = first * second;
+                break;
+                case "/":
+                ret = first / second;
+                break;
+                default:
+                ret = 'q';
+                break;
+            }
+            return ret;
+        }
+
+        function print(value){
+            return "최종 결과 값은 " + value + "입니다.";
+        }
+
+        function main(){
+            var result = getFirstValue();
+            while(true){
+                var op = getOperator();
+                if(op === 'q'){
+                    break;
+                }
+                var secondN = getSecondValue();
+                result = calculate(result, secondN, op);
+            }
+            var out = document.getElementById("output");
+            out.innerHTML = print(result);
+            
+        }
+
+        main();
+
+    </script>
+    
+</body>
+</html>

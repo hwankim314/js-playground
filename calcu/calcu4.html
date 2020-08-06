@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>여러 값 입력 및 사칙연산 - 반복문</h1>
+    <div id = "output"></div>
+    <script>
+        var num1 = Number(prompt("첫 번째 수를 입력해 주세요"));  
+        var ans = [];
+        ans.push(num1);
+        var out = document.getElementById('output');
+        var n = 2;
+        while(true){
+            var op = prompt("연산자를 입력해 주세요 (q=종료)");
+
+            if(op === 'q'){
+                break;
+            };
+            
+            var num2 = Number(prompt(n +" 번째 수를 입력해 주세요"));
+
+            if(op === '+'){
+                ans[0] = ans[0] + num2;
+            }else if(op === '-'){
+                ans[0] = ans[0] - num2;
+            }else if(op === '*'){
+                ans[0] = ans[0] * num2;
+            }else if(op === '/'){
+                ans[0] = ans[0] / num2;
+            }else{
+                ans[0] = "중간오류 ";
+                break;
+            }
+            
+            n++;
+            out.innerHTML = "최종결과 값은 " + ans[0] + "입니다.";
+        }
+
+    </script>
+</body>
+</html>
