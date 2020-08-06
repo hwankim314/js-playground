@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>값 입력 및 사칙연산 - 조건문</h1>
+    첫번째 숫자 : <input type = text id = "i1"><br>
+    연산자<input type = text id = "i2"><br>
+    두번째 숫자 : <input type = text id = "i3"><br>
+    <button id = "btn1" onclick = "calcu()">계산</button>
+    <div id = "output"></div>
+
+    <script>
+        function calcu(){
+            var str1 = document.getElementById("i1").value;
+            var str2 = document.getElementById("i3").value;
+            var n1 = Number(str1);
+            var n2 = Number(str2);
+            var op = document.getElementById("i2").value;
+            var out = document.getElementById('output');
+
+            if(op === '+'){
+                out.innerHTML = n1 + " + " + n2 + " = " + (n1 + n2);
+            } else if(op === '-'){
+                out.innerHTML = n1 + " - " + n2 + " = " + (n1 - n2);
+            } else if(op === '*'){
+                out.innerHTML = n1 + " * " + n2 + " = " + (n1 * n2);
+            } else if(op === '/'){
+                out.innerHTML = n1 + " / " + n2 + " = " + (n1 / n2);
+            } else{
+                out.innerHTML = "연산자에 + - * / 중 하나를 입력해주세요";
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>
