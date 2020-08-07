@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>한 줄로 입력받아 처리하기</h1>   
+    계산식을 입력해 주세요 <input type = "text" id = "ip1">
+    <button id = "btn1" onclick = "main()">계산</button>
+    <div id = "output"></div>
+    <script>
+        function spl(){
+            var ip = document.getElementById('ip1').value;
+            var aa = ip.split(" ");  //배열
+            return aa;
+        };   
+
+        function calculate(arr){
+            for(i = 1; i < (arr.length - i); i++){
+                switch(arr[(2 * i) - 1]){
+                    case "+":
+                    arr[0] = Number(arr[0]) + Number(arr[2 * i]);
+                    break;
+
+                    case "-":
+                    arr[0] = Number(arr[0]) - Number(arr[2 * i]);
+                    break;
+
+                    case "*":
+                    arr[0] = Number(arr[0]) * Number(arr[2 * i]);
+                    break;
+
+                    case "/":
+                    arr[0] = Number(arr[0]) / Number(arr[2 * i]);
+                    break;
+
+                    default:
+                    alert("알맞은 연산자를 입력해 주세요 + - * /");
+                    arr[0] = "연산자 입력 오류";
+                    break;
+                };
+            }
+        };
+
+        function print(v){
+            return "최종 결과값은 " + v + "입니다.";
+        };
+
+        function main(){
+            var ary = spl();
+            calculate(ary);
+            var out = document.getElementById('output');
+            out.innerHTML = print(ary[0])
+        };         
+    </script>
+</body>
+</html>
