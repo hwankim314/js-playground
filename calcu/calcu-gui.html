@@ -22,12 +22,20 @@
             height: 100px;
             margin: 10px;
         }
+
+        #ac{
+            width: 480px;
+        }
     </style>
 </head>
 <body>
     <h1>JS Calculator</h1>   
     <div>
         <div id = "output">0</div>
+
+        <div id = "btn0">
+            <button id='ac' onclick='allClear(event)'>A/C</button>
+        </div>
         <div id = "btn1">
             <button id='7' onclick='clickNumbers(event)'>7</button>
             <button id='8' onclick='clickNumbers(event)'>8</button>
