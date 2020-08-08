@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 움직이기 퍼즐</title>
+
+    <style>
+        p{
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #btns{
+            width: 290px;
+        }
+
+        #btn3{
+            width: 605px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>퍼즐구현1 : 레이아웃 구성</h1>
+    <div>
+       <p id = "word1">HELLO</p>
+       <div id = "word2"></div>
+
+    </div>
+
+    <div id>
+        <button id = "btns" onclick="swap(event)">뒤집기</button>
+        <button id = "btns" onclick="shift(event)">밀어내기</button>
+    </div>
+
+    <div id>
+        <button id = "btn3">일치합니다</button>
+    </div>
+
+    <script>
+        var str = document.getElementById("word1").innerHTML;
+        var word2 = document.getElementById("word2");
+
+        for(var i = 0; i < str.length; i++){
+            var btn = document.createElement("button");
+            btn.innerHTML = str[i];
+            word2.appendChild(btn);
+        }
+
+        var swap = function(){
+            console.log("swap");
+        };
+
+        var shift = function(){
+            console.log("shift");
+        };
+    </script>
+</body>
+
+</html>
