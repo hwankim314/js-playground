@@ -30,37 +30,39 @@
 <body>
     <h1>퍼즐구현1 : 레이아웃 구성</h1>
     <div>
-       <p id = "word1">HELLO</p>
-       <div id = "word2"></div>
+        <p id="word1">HELLO</p>
+        <div id="word2"></div>
 
     </div>
 
     <div id>
-        <button id = "btns" onclick="swap(event)">뒤집기</button>
-        <button id = "btns" onclick="shift(event)">밀어내기</button>
+        <button id="btns" onclick="swap(event)">뒤집기</button>
+        <button id="btns" onclick="shiftR(event)">밀어내기</button>
     </div>
 
     <div id>
-        <button id = "btn3">일치합니다</button>
+        <button id="btn3">일치합니다</button>
     </div>
 
     <script>
         var str = document.getElementById("word1").innerHTML;
+        var spl = str.split("");
         var word2 = document.getElementById("word2");
 
-        for(var i = 0; i < str.length; i++){
+        for (var i = 0; i < str.length; i++) {
             var btn = document.createElement("button");
             btn.innerHTML = str[i];
             word2.appendChild(btn);
         }
 
-        var swap = function(){
+        var swap = function (event) {
             console.log("swap");
-        };
+        }
 
-        var shift = function(){
-            console.log("shift");
-        };
+        var shiftR = function (event) {
+            console.log("shiftR");
+        }
+
     </script>
 </body>
 
