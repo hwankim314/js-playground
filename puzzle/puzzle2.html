@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 움직이기 퍼즐</title>
+
+    <style>
+        p{
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #btns{
+            width: 176px;
+        }
+
+        #btn3{
+            width: 580px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>퍼즐구현2 : 버튼 기능</h1>
+    <div>
+        <p id="word1">HELLO</p>
+        <div id="word2"></div>
+
+    </div>
+
+    <div id>
+        <button id="btns" onclick="swap(event)">뒤집기</button>
+        <button id="btns" onclick="shiftR(event)">오른쪽밀어내기</button>
+        <button id="btns" onclick="shiftL(event)">왼쪽밀어내기</button>
+    </div>
+
+    <div id>
+        <button id="btn3" onclick="judge()">일치합니다</button>
+    </div>
+
+    <script src="puzzle.js">
+
+    </script>
+</body>
+
+</html>
