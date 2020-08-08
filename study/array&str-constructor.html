@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var Human = function (name, hp, power){
+        this.name = name;
+        this.hp = hp;
+        this.power = power;
+        this.attack = function(target){
+            console.log(this.name + "이 " + target.name +"을 공격했다.");
+            target.hp -= this.power;
+        };
+        this.show = function(){
+            console.log("[%s] %d", this.name, this.hp);
+        };
+    };
+
+    var p1 = new Human("Kim", 100, 10);
+    var p2 = new Human("Lee", 90, 20);
+
+    p1.attack(p2);
+    p2.show();
+    </script>
+</body>
+</html>
