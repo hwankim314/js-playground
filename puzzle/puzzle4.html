@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 움직이기 퍼즐</title>
+
+    <style>
+        p{
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #btns{
+            width: 176px;
+        }
+
+        #btn3{
+            width: 580px;
+        }
+        #btnsP{
+            width: 580px;
+            height: 50px;
+        }
+        #word1{
+            text-align: center;
+            width: 600px;
+            font-size: 30px;
+        }
+        #score{
+            text-align: center;
+            width: 600px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>퍼즐구현3 : 단어 섞기</h1>
+    <div>
+        <p id="score"></p>
+    </div>
+
+    <div>
+        <p id="word1"></p>
+        <div id="word2"></div>
+
+    </div>
+
+    <div id>
+        <button id="btns" onclick="shuffle(event)">섞기</button>
+        <button id="btns" onclick="swap(event)">뒤집기</button>
+        <button id="btns" onclick="shiftR(event)">오른쪽밀어내기</button>
+        <button id="btns" onclick="shiftL(event)">왼쪽밀어내기</button>
+    </div>
+
+    <div id>
+        <button id="btn3" onclick="judge()">확인</button>
+    </div>
+
+    <script src="puzzle.js">
+
+    </script>
+</body>
+
+</html>
